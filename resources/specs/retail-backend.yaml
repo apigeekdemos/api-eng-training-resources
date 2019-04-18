@@ -1,8 +1,8 @@
 openapi: "3.0.0"
 info:
   version: 1.0.0
-  title: API Engineer Backend Training Database
-  description: Backend database used for Apigee API Engineer training class
+  title: Retail Backend
+  description: Retail backend database used for Apigee API Engineer training class
   contact:
     name: Google Cloud (Apigee)
     email: apigee@example.org
@@ -12,7 +12,7 @@ info:
     url: https://opensource.org/licenses/MIT
 servers:
   - url: https://{org}-{env}.apigee.net/training/db
-    description: Backend for Apigee API Engineer training
+    description: Retail backend for Apigee API Engineer training
     variables:
       org:
         default: REPLACEME
