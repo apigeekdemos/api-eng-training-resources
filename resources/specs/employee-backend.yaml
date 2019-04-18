@@ -290,6 +290,7 @@ components:
   schemas:
     Category:
       type: object
+      description: product category
       required:
         - color
         - id
@@ -308,17 +309,18 @@ components:
           type: string
     Categories:
       type: array
+      description: array of product categories
       items:
         $ref: "#/components/schemas/Category"
     Store:
       type: object
+      description: store
       required:
         - id
         - name
         - site_type
       properties:
         adr:
-          description: store address
           $ref: "#/components/schemas/Address"
         affiliate:
           description: affiliate name
@@ -344,10 +346,12 @@ components:
             - warehouse
     Stores:
       type: object
+      description: list of stores
       additionalProperties:
         $ref: "#/components/schemas/Store"
     Address:
       type: object
+      description: store address
       required:
         - addr1
         - city
@@ -375,6 +379,7 @@ components:
           type: string
     Location:
       type: object
+      description: store location
       required:
         - latitude
         - longitude
@@ -393,6 +398,7 @@ components:
           maximum: 180
     Product:
       type: object
+      description: product
       required:
         - category
         - image
@@ -422,37 +428,26 @@ components:
           type: string
     ProductForUpdate:
       type: object
+      description: product (updateable fields)
       required:
         - overall_rating
       properties:
-        category:
-          description: category name
-          type: string
-        image:
-          description: image url
-          type: string
-        name:
-          description: product id
-          type: string
         overall_rating:
           description: rating of product
           type: number
           format: float
-        product_name:
-          description: descriptive product name
-          type: string
-        short_description:
-          description: short paragraph describing the product
-          type: string
     Products:
       type: object
+      description: list of products
       additionalProperties:
         $ref: "#/components/schemas/Product"
     Order:
       type: object
+      description: order request
       additionalProperties: true
     NewOrderResponse:
       type: object
+      description: order response
       required:
         - name
       properties:
@@ -461,6 +456,7 @@ components:
           type: string
     Error:
       type: object
+      description: error response
       required:
         - error
         - error_description
