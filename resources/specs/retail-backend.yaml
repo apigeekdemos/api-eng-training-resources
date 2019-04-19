@@ -50,18 +50,18 @@ paths:
               schema:
                 $ref: "#/components/schemas/Error"
   /categories/{categoryId}:
-    parameters:
-      - name: categoryId
-        in: path
-        required: true
-        description: category id
-        schema:
-          type: integer
     get:
       summary: Get a specific category
       operationId: getCategoryById
       tags:
         - categories
+      parameters:
+        - name: categoryId
+          in: path
+          required: true
+          description: category id
+          schema:
+            type: integer
       responses:
         '200':
           description: Selected category
@@ -101,18 +101,18 @@ paths:
               schema:
                 $ref: "#/components/schemas/Error"
   /stores/{storeId}:
-    parameters:
-      - name: storeId
-        in: path
-        required: true
-        description: store id
-        schema:
-          type: string
     get:
       summary: Get a specific store
       operationId: getStoresById
       tags:
         - stores
+      parameters:
+        - name: storeId
+          in: path
+          required: true
+          description: store id
+          schema:
+            type: string
       responses:
         '200':
           description: Selected store
@@ -152,18 +152,18 @@ paths:
               schema:
                 $ref: "#/components/schemas/Error"
   /products/{productId}:
-    parameters:
-      - name: productId
-        in: path
-        required: true
-        description: product id
-        schema:
-          type: string
     get:
       summary: Get a specific product
       operationId: getProductById
       tags:
         - products
+      parameters:
+        - name: productId
+          in: path
+          required: true
+          description: product id
+          schema:
+            type: string
       responses:
         '200':
           description: Selected product
@@ -189,6 +189,13 @@ paths:
       operationId: updateProductById
       tags:
         - products
+      parameters:
+        - name: productId
+          in: path
+          required: true
+          description: product id
+          schema:
+            type: string
       requestBody:
         description: Product fields to update
         required: true
@@ -250,18 +257,18 @@ paths:
               schema:
                 $ref: "#/components/schemas/Error"
   /orders/{orderId}:
-    parameters:
-      - name: orderId
-        in: path
-        required: true
-        description: order id
-        schema:
-          type: string
     get:
       summary: Get a specific order
       operationId: getOrderById
       tags:
         - orders
+      parameters:
+        - name: orderId
+          in: path
+          required: true
+          description: order id
+          schema:
+            type: string
       responses:
         '200':
           description: Selected order
@@ -269,6 +276,37 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/Order"
+        '404':
+          description: Order not found
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        default:
+          description: unexpected error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+    delete:
+      summary: Delete a specific order
+      operationId: deleteOrderById
+      tags:
+        - orders
+      parameters:
+        - name: orderId
+          in: path
+          required: true
+          description: order id
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Null response
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/DeleteOrderResponse"
         '404':
           description: Order not found
           content:
@@ -454,6 +492,9 @@ components:
         name:
           description: string id (used for access)
           type: string
+    DeleteOrderResponse:
+      type: object
+      nullable: true
     Error:
       type: object
       description: error response
