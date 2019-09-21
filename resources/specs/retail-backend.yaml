@@ -18,7 +18,7 @@ servers:
         default: REPLACEME
         description: Apigee Edge organization hosting database backend proxy
       env:
-        default: prod
+        default: test
         description: Apigee Edge environment in organization hosting the backend proxy
 tags:
   - name: categories
