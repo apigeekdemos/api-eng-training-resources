@@ -11,7 +11,7 @@ info:
     name: MIT
     url: https://opensource.org/licenses/MIT
 servers:
-  - url: https://YOURORG-YOURENV.apigee.net/retail/v1
+  - url: https://YOURORG-test.apigee.net/retail/v1
     description: Retail API for Apigee API Engineer training
 tags:
   - name: categories
