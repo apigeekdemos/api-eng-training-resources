@@ -103,7 +103,7 @@ paths:
   /stores/{storeId}:
     get:
       summary: Get a specific store
-      operationId: getStoresById
+      operationId: getStoreById
       tags:
         - stores
       parameters:
