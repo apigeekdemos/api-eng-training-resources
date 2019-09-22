@@ -13,13 +13,6 @@ info:
 servers:
   - url: https://YOURORG-YOURENV.apigee.net/retail/v1
     description: Retail API for Apigee API Engineer training
-    variables:
-      org:
-        default: REPLACEME
-        description: Apigee Edge organization hosting database backend proxy
-      env:
-        default: test
-        description: Apigee Edge environment in organization hosting the backend proxy
 tags:
   - name: categories
     description: Product Categories
