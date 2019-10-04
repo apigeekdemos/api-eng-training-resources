@@ -11,7 +11,7 @@ info:
     name: MIT
     url: https://opensource.org/licenses/MIT
 servers:
-  - url: https://gcp-cs-training-01-test.apigee.net/training/db
+  - url: "https://gcp-cs-training-01-test.apigee.net/training/db"
     description: Retail backend for Apigee API Engineer training
 tags:
   - name: categories
