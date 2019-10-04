@@ -11,15 +11,8 @@ info:
     name: MIT
     url: https://opensource.org/licenses/MIT
 servers:
-  - url: https://{org}-{env}.apigee.net/training/db
+  - url: https://gcp-cs-training-01-test.apigee.net/training/db
     description: Retail backend for Apigee API Engineer training
-    variables:
-      org:
-        default: REPLACEME
-        description: Apigee Edge organization hosting database backend proxy
-      env:
-        default: test
-        description: Apigee Edge environment in organization hosting the backend proxy
 tags:
   - name: categories
     description: Product Categories
