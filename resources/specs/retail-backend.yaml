@@ -318,6 +318,7 @@ components:
       type: http
       description: basic auth
       scheme: basic
+
   schemas:
     Category:
       type: object

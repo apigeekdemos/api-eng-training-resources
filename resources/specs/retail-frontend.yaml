@@ -1,18 +1,18 @@
 openapi: "3.0.0"
 info:
-  version: 1.0.0
-  title: Retail
-  description: Retail frontend APIs used for Apigee API Engineer training class
+  version: 0.0.1
+  title: Retail API v1
+  description: Retail API
   contact:
-    name: Google Cloud (Apigee)
-    email: apigee@example.org
-    url: https://cloud.google.com/apigee
+    name: YOUR NAME
+    email: you@example.org
+    url: https://example.org
   license:
     name: MIT
     url: https://opensource.org/licenses/MIT
 servers:
-  - url: https://YOURORG-test.apigee.net/retail/v1
-    description: Retail API for Apigee API Engineer training
+  - url: "https://YOURORG-test.apigee.net/retail/v1"
+    description: Retail API v1
 tags:
   - name: categories
     description: Product Categories
